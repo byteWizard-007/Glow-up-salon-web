@@ -1,0 +1,75 @@
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.pricing-card {
+  padding: 3rem;
+  background-color: var(--bg-light);
+  border-top: 4px solid var(--primary-color);
+}
+
+.pricing-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.pricing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pricing-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.item-name {
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.item-dots {
+  flex-grow: 1;
+  border-bottom: 1px dashed #ccc;
+  margin: 0 15px;
+  position: relative;
+  top: -4px;
+}
+
+.item-price {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: 'Playfair Display', serif;
+}
+
+.pricing-cta {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--accent-pink);
+  border-radius: var(--border-radius);
+}
+
+.pricing-cta p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .pricing-card {
+    padding: 2rem;
+  }
+}

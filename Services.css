@@ -1,0 +1,101 @@
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.service-row.reverse {
+  direction: rtl;
+}
+
+.service-row.reverse .service-row-content {
+  direction: ltr;
+}
+
+.service-row-img {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  height: 450px;
+}
+
+.service-row-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.service-row:hover .service-row-img img {
+  transform: scale(1.05);
+}
+
+.service-price-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--bg-light);
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-md);
+  font-family: 'Playfair Display', serif;
+  z-index: 2;
+}
+
+.service-row.reverse .service-price-badge {
+  left: 20px;
+  right: auto;
+}
+
+.service-row-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-row-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .service-row.reverse {
+    direction: ltr;
+  }
+  
+  .service-row-img {
+    height: 350px;
+  }
+  
+  .service-row.reverse .service-price-badge {
+    right: 20px;
+    left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-row-content h2 {
+    font-size: 2rem;
+  }
+  
+  .service-row-img {
+    height: 300px;
+  }
+}
